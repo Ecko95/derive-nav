@@ -1,16 +1,18 @@
 package com.example.joshua.derivenav;
 
 import android.content.Intent;
+import android.media.Image;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
 
-    private Button tabs, progress, text, dots, tabsNL, tabClassic;
+    private ImageButton tabClassic;
     private Toolbar toolbar;
 
     @Override
@@ -18,21 +20,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        tabs = (Button) findViewById(R.id.tabsL);
-        tabsNL = (Button) findViewById(R.id.tabs);
-        tabClassic = (Button) findViewById(R.id.tabClassic);
-        text = (Button) findViewById(R.id.text);
-        progress = (Button) findViewById(R.id.progress);
-        dots = (Button) findViewById(R.id.dots);
-        toolbar = (Toolbar) findViewById(R.id.toolbar);
-
-        tabs.setOnClickListener(this);
-        tabsNL.setOnClickListener(this);
+        tabClassic = findViewById(R.id.tabClassic);
         tabClassic.setOnClickListener(this);
-        text.setOnClickListener(this);
-        progress.setOnClickListener(this);
-        dots.setOnClickListener(this);
-
         setSupportActionBar(toolbar);
     }
 

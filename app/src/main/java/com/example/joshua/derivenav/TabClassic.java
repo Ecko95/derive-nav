@@ -1,6 +1,7 @@
 package com.example.joshua.derivenav;
 
 import android.os.Bundle;
+import android.widget.Toast;
 
 import com.github.fcannizzaro.materialstepper.AbstractStep;
 import com.github.fcannizzaro.materialstepper.style.TabStepper;
@@ -27,15 +28,23 @@ public class TabClassic extends TabStepper {
         addStep(createFragment(new StepSample()));
         addStep(createFragment(new StepSample()));
         addStep(createFragment(new StepSample()));
-
         super.onCreate(savedInstanceState);
     }
+
 
     private AbstractStep createFragment(AbstractStep fragment) {
         Bundle b = new Bundle();
         b.putInt("position", i++);
         fragment.setArguments(b);
         return fragment;
+
+
     }
 
+    @Override
+    public void onComplete(Bundle data) {
+        Toast.makeText(this, "Complete!", Toast.LENGTH_SHORT).show();
+        finish();
+        super.onComplete(data);
+    }
 }

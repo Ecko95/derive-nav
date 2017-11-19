@@ -49,7 +49,7 @@ public class StepSample extends AbstractStep {
 
     @Override
     public String name() {
-        return "Tab " + getArguments().getInt("position", 0);
+        return "Step! " + getArguments().getInt("position", 0);
     }
 
     @Override
@@ -74,7 +74,22 @@ public class StepSample extends AbstractStep {
 
     @Override
     public String optional() {
-        return "You can skip";
+        int tabId = getArguments().getInt("position",getId());
+        if (tabId == 1)
+        {
+            return "subtitle 1";
+        }else if(tabId == 2){
+            return "subtitle 2";
+        }else if(tabId == 3) {
+            return "subtitle 3";
+        }else if(tabId == 4) {
+            return "subtitle 4";
+        }else if(tabId == 5) {
+            return "subtitle 5";
+        }else{
+            return String.valueOf(false);
+        }
+
     }
 
     @Override
@@ -86,4 +101,5 @@ public class StepSample extends AbstractStep {
     public String error() {
         return "<b>You must click!</b> <small>this is the condition!</small>";
     }
+
 }

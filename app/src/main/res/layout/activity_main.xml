@@ -25,7 +25,7 @@
             android:paddingLeft="16dp"
             android:paddingRight="16dp"
             android:paddingTop="16dp"
-            tools:context="com.">
+            tools:context="">
 
             <TextView
                 android:layout_width="wrap_content"
@@ -33,75 +33,21 @@
                 android:layout_marginBottom="8dp"
                 android:layout_marginLeft="2dp"
                 android:fontFamily="sans-serif-light"
-                android:text="@string/linear"
-                android:textSize="18sp"/>
+                android:text="Bookings"
+                android:textSize="18sp" />
 
-            <Button
-                android:id="@+id/tabsL"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
-                android:fontFamily="sans-serif-condesed"
-                android:padding="16dp"
-                android:text="@string/tabs_stepper"/>
-
-            <Button
-                android:id="@+id/text"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
-                android:fontFamily="sans-serif-condesed"
-                android:padding="16dp"
-                android:text="@string/text_stepper"/>
-
-            <Button
-                android:id="@+id/progress"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
-                android:fontFamily="sans-serif-condesed"
-                android:padding="16dp"
-                android:text="@string/progress_stepper"/>
-
-            <Button
-                android:id="@+id/dots"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="12dp"
-                android:fontFamily="sans-serif-condesed"
-                android:padding="16dp"
-                android:text="@string/dots_stepper"/>
-
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
-                android:layout_marginLeft="2dp"
-                android:layout_marginTop="4dp"
-                android:fontFamily="sans-serif-light"
-                android:text="@string/non_linear"
-                android:textSize="18sp"/>
-
-            <Button
-                android:id="@+id/tabs"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
-                android:fontFamily="sans-serif-condesed"
-                android:padding="18dp"
-                android:text="@string/tabs_stepper_alternative"/>
-
-            <Button
+            <ImageButton
                 android:id="@+id/tabClassic"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
-                android:fontFamily="sans-serif-condesed"
-                android:padding="18dp"
-                android:text="@string/tabs_stepper_classic"/>
+                android:layout_width="329dp"
+                android:layout_height="175dp"
+                android:background="@color/cardview_shadow_end_color"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/bookings" />
 
         </LinearLayout>
+
+
+
 
     </ScrollView>
 
