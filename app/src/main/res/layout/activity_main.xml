@@ -33,16 +33,16 @@
                 android:layout_marginBottom="8dp"
                 android:layout_marginLeft="2dp"
                 android:fontFamily="sans-serif-light"
-                android:text="Bookings"
+                android:text="Things To Do"
                 android:textSize="18sp" />
 
             <ImageButton
                 android:id="@+id/tabClassic"
-                android:layout_width="329dp"
+                android:layout_width="165dp"
                 android:layout_height="175dp"
                 android:background="@color/cardview_shadow_end_color"
                 android:scaleType="fitCenter"
-                app:srcCompat="@drawable/bookings" />
+                app:srcCompat="@drawable/things_to_do" />
 
         </LinearLayout>
 
