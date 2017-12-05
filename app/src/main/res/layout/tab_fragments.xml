@@ -39,14 +39,6 @@
                 android:text="@string/title_card_things_to_do"
                 android:textSize="18sp" />
 
-            <ImageButton
-                android:id="@+id/tabClassic"
-                android:layout_width="165dp"
-                android:layout_height="175dp"
-                android:background="@color/cardview_shadow_end_color"
-                android:scaleType="fitCenter"
-                app:srcCompat="@drawable/things_to_do" />
-
         </LinearLayout>
 
     </ScrollView>

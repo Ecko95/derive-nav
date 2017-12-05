@@ -1,19 +1,29 @@
 package com.example.joshua.derivenav;
 
 import android.os.Bundle;
+import android.support.annotation.Nullable;
+import android.support.v4.app.FragmentTransaction;
+import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.text.Html;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.Toast;
 
 import com.github.fcannizzaro.materialstepper.AbstractStep;
+
+import java.util.zip.Inflater;
 
 /**
  * Created by Joshua on 18/11/2017.
  */
 
-public class StepSample extends AbstractStep {
+public class StepSample extends AbstractStep{
 
     private int i = 1;
     private Button button;
@@ -21,14 +31,31 @@ public class StepSample extends AbstractStep {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        setHasOptionsMenu(true);
 
         View v = inflater.inflate(R.layout.step, container, false);
-        button = (Button) v.findViewById(R.id.button);
+
+
+        button = v.findViewById(R.id.button);
+
+        Toolbar toolbarFrag = v.findViewById(R.id.toolbarFrag);
+
+        //set toolbar appearance
+        toolbarFrag.setTitle("Fragment 1");
+        toolbarFrag.setSubtitle(optional());
+
 
         if (savedInstanceState != null)
+
+
             i = savedInstanceState.getInt(CLICK, 0);
 
         button.setText(Html.fromHtml("Tap <b>" + i + "</b>"));
+
+        //for crate home button
+        AppCompatActivity activity = (AppCompatActivity) getActivity();
+        activity.setSupportActionBar(toolbarFrag);
+        activity.getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -37,8 +64,8 @@ public class StepSample extends AbstractStep {
                 mStepper.getExtras().putInt(CLICK, i);
             }
         });
-
         return v;
+
     }
 
     @Override
@@ -102,4 +129,18 @@ public class StepSample extends AbstractStep {
         return "<b>You must click!</b> <small>this is the condition!</small>";
     }
 
+    @Override
+    public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
+        inflater.inflate(R.menu.menu, menu);
+
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch(item.getItemId()){
+            case android.R.id.home:
+                getActivity().onBackPressed();
+        }
+        return super.onOptionsItemSelected(item);
+    }
 }

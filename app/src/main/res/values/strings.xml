@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Derive Nav</string>
+    <string name="app_name" translatable="false">Dérive Nav</string>
     <string name="linear">LINEAR</string>
     <string name="tabs_stepper">Tabs Stepper</string>
     <string name="text_stepper">Text Stepper</string>
@@ -8,4 +8,22 @@
     <string name="non_linear">NON LINEAR</string>
     <string name="tabs_stepper_alternative">Tabs Stepper (Alternative)</string>
     <string name="tabs_stepper_classic">Tabs Stepper (Classic)</string>
+    <string name="title_card_things_to_do">Things To Do</string>
+
+    <string name="ms_prev">BACK</string>
+    <string name="ms_next">NEXT</string>
+    <string name="ms_end">COMPLETE</string>
+    <string name="ms_continue">CONTINUE</string>
+    <string name="ms_optional">Optional</string>
+    <string name="ms_text_step">Step $current of $total</string>
+    <string name="search_hint">Search...</string>
+
+    <string-array name="query_suggestions">
+        <item>Android</item>
+        <item>iOS</item>
+        <item>SCALA</item>
+        <item>Ruby</item>
+        <item>JavaScript</item>
+    </string-array>
+
 </resources>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="ms_prev">ANTERIOR</string>
+    <string name="ms_next">SIGUIENTE</string>
+    <string name="ms_end">COMPLETE</string>
+    <string name="ms_continue">CONTINUAR</string>
+    <string name="ms_optional">Opcional</string>
+    <string name="ms_text_step">Paso $current de $total</string>
+    <string name="title_card_things_to_do">Cosas que hacer</string>
+    <string name="app_name" translatable="false">Dérive Nav</string>
+    <string name="search_hint">Buscar...</string>
+</resources>
